@@ -1,6 +1,6 @@
 import {
   onMounted,
-  onBeforeUnmount
+  onUnmounted
 } from 'vue'
 
 import load from '../ThreeDimensional/resources/index'
@@ -12,9 +12,10 @@ export default function use3d() {
   onMounted(async () => {
     const resources = await load()
     threeDimensional = new ThreeDimensional(document.querySelector('canvas.webgl'), resources)
+    console.log('3d')
   })
   
-  onBeforeUnmount(() => {
+  onUnmounted(() => {
     if (threeDimensional) {
       threeDimensional.destroy()
     }

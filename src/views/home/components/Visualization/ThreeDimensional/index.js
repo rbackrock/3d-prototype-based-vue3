@@ -19,6 +19,7 @@ import Renderer from './Renderer'
 import World from './World/World'
 import Postprocessing from './Postprocessing/Postprocessing'
 import Css2dRender from './Css2dRender'
+import Css3dRender from './Css3dRender'
 
 let instance = null
 
@@ -46,6 +47,9 @@ export class ThreeDimensional {
 
     // css2drender
     this.css2dRender = new Css2dRender()
+
+    // css3drender
+    this.css3dRender = new Css3dRender()
     
     // 后期处理
     this.postprocessingRender = new Postprocessing()
@@ -67,6 +71,7 @@ export class ThreeDimensional {
     this.camera.resize()
     this.renderer.resize()
     this.css2dRender.resize()
+    this.css3dRender.resize()
     this.postprocessingRender.resize()
   }
 
@@ -75,6 +80,7 @@ export class ThreeDimensional {
     // this.renderer.update()
     this.postprocessingRender.update()
     this.css2dRender.update()
+    this.css3dRender.update()
 
     //controls
   }
@@ -109,6 +115,7 @@ export class ThreeDimensional {
     this.camera.destroy()
     this.renderer.destroy()
     this.css2dRender.destroy()
+    this.css3dRender.destroy()
 
     instance = null
   }

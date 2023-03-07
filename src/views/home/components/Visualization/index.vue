@@ -1,14 +1,27 @@
 <script setup>
-import use3d from './composables/use3d'
+import {
+  onMounted,
+  onUnmounted
+} from 'vue'
 
-const {
-  threeDimensional
-} = use3d()
+import HelloWorld from '@/components/HelloWorld.vue'
+import use3dVisualizationStore from '@/store/visualization'
+
+const store = use3dVisualizationStore()
+
+onMounted(async () => {
+  await store.makeThreeDimensionalInstance()
+})
+
+onUnmounted(() => {
+  store.threeDimensionalInstancedestroy()
+})
 </script>
 
 <template>
   <div class="canvas-3d-container">
     <canvas class="webgl"></canvas>
+    <HelloWorld />
   </div>
 </template>
 

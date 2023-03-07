@@ -43,5 +43,7 @@ export default class Postprocessing {
 
   destroy() {
     this.outlinePass.dispose()
+    this.renderPass.dispose()
+    this.composer.dispose()
   }
 }

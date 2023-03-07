@@ -1,7 +1,4 @@
-import * as THREE from 'three'
-
 import EventEmitter from '../Utils/EventEmitter'
-import gsap from 'gsap'
 import ThreeDimensional from '..'
 import Environment from './Environment'
 import {
@@ -20,6 +17,7 @@ export default class World extends EventEmitter {
     this.sizes = this.threeDimensional.sizes
     this.outlinePass = this.threeDimensional.outlinePass 
     this.resources = this.threeDimensional.resources
+    this.environment = new Environment()
 
     // 准备需要控制的 object3d 对象
     this.controls = {
