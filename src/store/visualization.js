@@ -22,7 +22,7 @@ export default defineStore('visualization', () => {
     return threeDimensionalInstance
   }
 
-  function threeDimensionalInstancedestroy() {
+  function threeDimensionalInstanceDestroy() {
     if (threeDimensionalInstance) {
       threeDimensionalInstance.destroy()
     }
@@ -32,6 +32,6 @@ export default defineStore('visualization', () => {
     loading,
     makeThreeDimensionalInstance,
     getThreeDimensionalInstance,
-    threeDimensionalInstancedestroy
+    threeDimensionalInstanceDestroy
   }
 })
