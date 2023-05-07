@@ -1,4 +1,4 @@
-import Home from '@/views/home/index.vue'
+import Home from '@/views/home/HomeView.vue'
 
 const routes = [
   {

@@ -1,5 +1,5 @@
 <script setup>
-import Visualization from './components/Visualization/index.vue'
+import Visualization from './components/Visualization/VisualizationComponent.vue'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import Visualization from './components/Visualization/index.vue'
   </div>
 </template>
 
-<style lang="less" scoped>
+<style lang="postcss" scoped>
 .container {
   width: 100%;
   height: 100%;

@@ -25,12 +25,7 @@ onUnmounted(() => {
   </div>
 </template>
 
-<style lang="less" scoped>
-.container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-
+<style lang="postcss" scoped>
   .canvas-3d-container {
     position: relative;
     width: 100%;
@@ -40,5 +35,4 @@ onUnmounted(() => {
       display: block;
     }
   }
-}
 </style>
