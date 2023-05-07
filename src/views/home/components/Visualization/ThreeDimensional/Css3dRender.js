@@ -1,6 +1,4 @@
-import {
-  CSS3DRenderer
-} from 'three/examples/jsm/renderers/CSS3DRenderer'
+import { CSS3DRenderer } from 'three/addons/renderers/CSS3DRenderer.js'
 import ThreeDimensional from '.'
 
 export default class Css3dRender {

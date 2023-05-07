@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import ThreeDimensional from '.'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import gsap from 'gsap'
 
 export const cameraType = {

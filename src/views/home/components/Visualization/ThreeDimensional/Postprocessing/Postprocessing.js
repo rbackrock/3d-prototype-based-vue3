@@ -1,7 +1,7 @@
 import * as THREE from 'three'
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
-import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass'
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js'
+import { RenderPass } from 'three/addons/postprocessing/RenderPass'
+import { OutlinePass } from 'three/addons/postprocessing/OutlinePass'
 
 import ThreeDimensional from '..'
 
