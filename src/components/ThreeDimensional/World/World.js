@@ -23,6 +23,8 @@ export default class World extends EventEmitter {
     this.on('destroy', () => {
       this.destroy()
     })
+
+    this.actors = {}
   }
 
   createScene() {
@@ -45,7 +47,7 @@ export default class World extends EventEmitter {
     // 删除并且置空控制物体的 gsap 动画对象让垃圾回收，或者其他事件对象
     // ES 类规范没有接口特性，需要清除 gsap 动画需要自己记得实现 destroy 方法
     for (const actorKey in this.actors) {
-      this.controls[actorKey].destroy && this.controls[actorKey].destroy()
+      this.actors[actorKey].destroy && this.actors[actorKey].destroy()
     }
   }
 }
