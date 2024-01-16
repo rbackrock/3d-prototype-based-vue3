@@ -3,6 +3,8 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js'
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js'
 import { OutlinePass } from 'three/addons/postprocessing/OutlinePass'
 import { SMAAPass } from 'three/addons/postprocessing/SMAAPass'
+import { GammaCorrectionShader } from 'three/addons/shaders/GammaCorrectionShader'
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass'
 
 import ThreeDimensional from '..'
 
@@ -47,6 +49,10 @@ export default class Postprocessing {
       this.sizes.height * this.renderer.instance.getPixelRatio()
     )
     this.composer.addPass(pass)
+    
+    // 添加伽马为了颜色修正
+    const gammaPass= new ShaderPass(GammaCorrectionShader);
+    composer.addPass(gammaPass)
   }
 
   resize() {
